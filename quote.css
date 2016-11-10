@@ -1,0 +1,22 @@
+#quote {
+  background-color: #FFFFFF;
+  padding-top: 2em;
+}
+
+body {
+  background-color: #7986CB !important;
+}
+
+p {
+  color: #7986CB;
+  font-family: 'Roboto', sans-serif;
+  font-size: 24pt;
+}
+
+footer {
+  color: #7986CB;
+}
+
+button {
+  padding: 1em;
+}
