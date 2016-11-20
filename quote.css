@@ -1,10 +1,11 @@
 #quote {
   background-color: #FFFFFF;
-  padding-top: 2em;
+  padding-top: 1em;
 }
 
 body {
   background-color: #7986CB !important;
+  margin: 3em;
 }
 
 p {
