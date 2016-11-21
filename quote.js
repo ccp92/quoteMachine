@@ -1,3 +1,29 @@
+/*var getAQuote = function() {
+  $('h3').append('<i class="fa fa-spinner fa-spin fa-3x">');
+ $.ajax({
+    url: 'https://andruxnet-random-famous-quotes.p.mashape.com/?cat=famous',
+    type: 'POST', // The HTTP Method
+    data: {}, // Additional parameters here
+    datatype: 'json',
+    success: function(data) {
+      console.log(data);
+      var obj = jQuery.parseJSON(data);
+      console.log(obj);
+      $('h3').empty();
+      $('h4').empty();
+      $('h3').append("\""+obj.quote+"\"");
+      $('h4').append("-"+obj.author);
+    },
+    error: function(err) { alert(err); },
+    beforeSend: function(xhr) {
+    xhr.setRequestHeader("X-Mashape-Authorization", "w4FxjW3RnJmshxtNfrO7dNrJtLMap1RAEXhjsnmEQ7xehWEaeE"); // Enter here your Mashape key
+    }
+});
+}
+
+getAQuote();*/
+
+
 $(document).ready(function() {
 	
   $('#quoted').on('click', function() {
