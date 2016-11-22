@@ -1,10 +1,11 @@
-/*var getAQuote = function() {
+// https://gist.github.com/pdotsani/134d5c9d0e670b5ada8f << Gist source
+var getAQuote = function() {
   $('h3').append('<i class="fa fa-spinner fa-spin fa-3x">');
  $.ajax({
     url: 'https://andruxnet-random-famous-quotes.p.mashape.com/?cat=famous',
     type: 'POST', // The HTTP Method
     data: {}, // Additional parameters here
-    datatype: 'json',
+    datatype: 'json', //Question: What's the difference between JSON and JSONP? Something to do with not being on the same domain?
     success: function(data) {
       console.log(data);
       var obj = jQuery.parseJSON(data);
@@ -13,6 +14,8 @@
       $('h4').empty();
       $('h3').append("\""+obj.quote+"\"");
       $('h4').append("-"+obj.author);
+	  //I'm assuming based on the console log output that the obj.quote and obj.author are what I need to call and put into my html.
+	  //I'm also guessing that the other fields are targetting the gists html elements.
     },
     error: function(err) { alert(err); },
     beforeSend: function(xhr) {
@@ -21,7 +24,7 @@
 });
 }
 
-getAQuote();*/
+getAQuote();
 
 
 $(document).ready(function() {
