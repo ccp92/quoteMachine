@@ -3,30 +3,41 @@
 
 <head>
   <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <!--Pulling the roboto font from Google-->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <!--Bootstrap-->
   <link rel="stylesheet" href="quote.css"/>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script> 
+  <!-- Own CSS-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <!--jQuery-->
   <script type="text/javascript" src="quote.js"></script>
+  <!--Own js-->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <!--Bootstrap js. Not sure if this is needed with the jQuery coming from Google-->
 </head>
 
 <body>
   <div class="row">
     <div class="col-md-4">
+	<!--Empty div to push quote column into centre-->
     </div>
     <div id="quote" class="col-md-4 img-rounded vcenter">
       <blockquote>
         <p class="text-center newQuote">Young people are in a condition like permanent intoxication, because youth is sweet and they are growing.</p>
+		<!-- Starting quote when page was loaded-->
         <footer class="newSource">Aristotle</footer>
+		<!-- Starting source when page is loaded-->
       </blockquote>
       <button id="quoted" class="btn">New</button>
 		<!--Linked to js and pulls a random quote from the array-->
 	  <a id="tweetLink" href="https://twitter.com/intent/tweet?text=Young%20people%20are%20in%20a%20condition%20like%20permanent%20intoxication,%20because%20youth%20is%20sweet%20and%20they%20are%20growing." target=#>
 	    <!-- This href will be updated when the "New" button is selected above-->
 		<button class="btn">Tweet</button>
+		<!-- Button is not directly linked to js, but is wrapped by an <a> tag which updates via js-->
 	  </a>
     </div>
     <div class="col-md-4">
+	<!--Empty div to push quote column into centre-->
     </div>
   </div>
 </body>
