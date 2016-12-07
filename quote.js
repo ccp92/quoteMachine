@@ -7,8 +7,9 @@ $(document).ready(function() {
 		success: function(data) {
 			$('.newQuote').text(data.quote);
 			$('.newSource').text(data.author);
+			//The two lines above update the text on the html side.
 			$('#tweetLink').attr('href', 'https://twitter.com/intent/tweet?text=' + encodeURIComponent(data.quote));
-			//This updates the href element surrounding the tweet button. 
+			//This updates the href element surrounding the tweet button.
 		},
 		headers: {"X-Mashape-Authorization": "w4FxjW3RnJmshxtNfrO7dNrJtLMap1RAEXhjsnmEQ7xehWEaeE"}
 	  });
