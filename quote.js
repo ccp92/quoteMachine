@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-	function getAQuote () {	
+	function getAQuote () {
 	  $.ajax('https://andruxnet-random-famous-quotes.p.mashape.com/?cat=famous',
 	  {
 		dataType: 'json',
@@ -17,12 +17,15 @@ $(document).ready(function() {
 	getAQuote();
 
   $('#quoted').on('click', function() {
-	getAQuote();
-    var arr = ['#EF5350', '#AB47BC', '#29B6F6', '#9CCC65', '#FFA726', '#8D6E63','#26A69A', '#D4E157', '#78909C','#00E676','#76FF03','#00E5FF','#651FFF','#F50057','#FF1744']; //Selection of colours for the page
-	var x = Math.floor((Math.random() * arr.length));
-	//Random number generator for the color of the screen.
-    $('p').css('color', arr[x]); //Update text colour
-    $('body').css('cssText', 'background-color: ' + arr[x] + ' !important;'); // Update background colour. !important to overwrite the bootstrap css
-    $('footer').css('color', arr[x]); //Update text colour in the footer
+		getAQuote();
+		function colourUpdate () {
+			var arr = ['#EF5350', '#AB47BC', '#29B6F6', '#9CCC65', '#FFA726', '#8D6E63','#26A69A', '#D4E157', '#78909C','#00E676','#76FF03','#00E5FF','#651FFF','#F50057','#FF1744']; //Selection of colours for the page
+			var x = Math.floor((Math.random() * arr.length));
+			//Random number generator for the color of the screen.
+	    $('p').css('color', arr[x]); //Update text colour
+	    $('body').css('cssText', 'background-color: ' + arr[x] + ' !important;'); // Update background colour. !important to overwrite the bootstrap css
+	    $('footer').css('color', arr[x]); //Update text colour in the footer
+		};
+		setTimeout (colourUpdate, 400);
   });
 });
